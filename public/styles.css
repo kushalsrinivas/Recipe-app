@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ffff;
+    scrollbar-highlight-color: rgb(221, 74, 74);
+
+}
+
+.container{
+    height: 35vh;
+    width: 90%;
+    margin: auto;
+    color: #3D4459;
+    background-color:#f3f3f3;
+    font-family: 'Averia Serif Libre', cursive;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: -2px;
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+}
+
+.header-container{
+    margin: 10px;
+    text-shadow: 2px 2px rgba(50, 50, 70, 0.281);
+}
+
+
+ .search-form {
+
+    min-width : 60vw;
+    min-height: 10vh;
+    margin: 15px auto;
+    align-items: flex-end;
+    justify-content: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding:10px;
+
+ 
+}
+
+.search-bar{
+    outline: none;
+    border: none;
+    padding: 10px;
+height: 100%;
+width :70%;
+}
+
+.search-btn{
+    background-color: yellowgreen;
+    padding : 10px 20px;
+    color: white;
+    font-family: 'montserrat';
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
