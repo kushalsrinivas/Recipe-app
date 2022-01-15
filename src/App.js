@@ -29,7 +29,7 @@ const App = (props)=>{
         setText(value);
     }
     React.useEffect(()=>{
-        // getRecipies();
+        getRecipies();
 
     },[query]);
     return (
@@ -44,6 +44,9 @@ const App = (props)=>{
                 </form>
 </div>
         </div>
+        <div className="recipe-box">
+
+
             {recipes.map((meal, index)=>{
                 return (
                     <Recipie 
@@ -53,6 +56,8 @@ const App = (props)=>{
                     img = {meal.recipe.images.SMALL.url}
                      />)
             })}
+
+        </div>
         </div>
     )
 }
