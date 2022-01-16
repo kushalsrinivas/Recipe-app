@@ -17,6 +17,7 @@ const App = (props)=>{
         const response = await fetch(base);
         const data = await response.json();
         setRecipies(data.hits);
+        console.log(data.hits);
 
     }
 
@@ -38,22 +39,29 @@ const App = (props)=>{
 
                 <Header/>
 <div >
+
                 <form className="search-form" onSubmit={(e)=>{e.preventDefault();}}>
                     <input className="search-bar" type="text" placeholder="search...." value={text} onChange={HandleChange}></input>
                     <button type="submit" className="search-btn" onClick={HandleSubmit}>Search</button>
                 </form>
 </div>
         </div>
+
         <div className="recipe-box">
 
 
             {recipes.map((meal, index)=>{
+                
                 return (
                     <Recipie 
                     key = {index}
                     title= {meal.recipe.label}
                     cal = {meal.recipe.calories}
                     img = {meal.recipe.images.SMALL.url}
+                    cousineType = {meal.recipe.cuisineType}
+                    dietLabel= {meal.recipe.dietLabels[0] +", "+meal.recipe.dietLabels[1]}
+                    mealType = {meal.recipe.mealType}
+                    ingredients={meal.recipe.ingredients}
                      />)
             })}
 
