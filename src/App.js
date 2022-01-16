@@ -33,6 +33,8 @@ const App = (props)=>{
         getRecipies();
 
     },[query]);
+
+
     return (
         <div className="main-container">
         <div className="container">
@@ -59,7 +61,10 @@ const App = (props)=>{
                     cal = {meal.recipe.calories}
                     img = {meal.recipe.images.SMALL.url}
                     cousineType = {meal.recipe.cuisineType}
-                    dietLabel= {meal.recipe.dietLabels[0] +", "+meal.recipe.dietLabels[1]}
+                    dietLabel= {
+  typeof meal.recipe.dietLabels.length !== 0 ?
+  (typeof  meal.recipe.dietLabels.length > 0 ? `${meal.recipe.dietLabels[0]}, ${meal.recipe.dietLabels[1]}` : meal.recipe.dietLabels[0])  : "N/A"                  
+                        }
                     mealType = {meal.recipe.mealType}
                     ingredients={meal.recipe.ingredients}
                      />)
