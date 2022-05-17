@@ -8,8 +8,8 @@ const App = (props)=>{
     const [text , setText] = React.useState("");
     const [query, setQuery] = React.useState("");
     const [recipes, setRecipies] = React.useState([]);
-     const APP_ID ="f6d7b36f";
-     const APP_KEY= "82eb7fa5a6226d763580dc55a10fc6b8";
+     const APP_ID ="";
+     const APP_KEY= "";
 
     const base= `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
